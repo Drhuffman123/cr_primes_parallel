@@ -1,0 +1,21 @@
+consumers = Fiber::ExecutionContext::Parallel.new("consumers", 8)
+channel    = Channel(Int32).new(64)
+wg         = WaitGroup.new(32)
+result     = Atomic.new(0)
+
+32.times do
+  consumers.spawn do
+    while value = channel.receive?
+      result.add(value)
+    end
+  ensure
+    wg.done
+  end
+end
+
+1024.times { |i| channel.send(i) }
+channel.close
+wg.wait
+
+p result.get  # => 523776
+
