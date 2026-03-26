@@ -1,0 +1,19 @@
+name: cr_primes_parallel
+version: 0.0.1
+
+authors:
+  - Daniel Huffman <drhuffman123@gmail.com>
+
+description: |
+  Exploration in multithreaded coding with Crystal-lang
+
+# dependencies:
+#   pg:
+#     github: will/crystal-pg
+#     version: "~> 0.5"
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+# license: MIT
