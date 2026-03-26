@@ -7,3 +7,6 @@ VERSION: 0.0.1
 
 * Build with: `crystal build eg_ex_context2.cr  -Dpreview_mt -Dexecution_context --release`
 
+ `-Dpreview_mt -Dexecution_context --release`
+
+* See: `https://github.com/crystal-lang/crystal/blob/a3178c32b/src/fiber/execution_context/parallel.cr`
