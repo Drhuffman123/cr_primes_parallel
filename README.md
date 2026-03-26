@@ -10,3 +10,11 @@ VERSION: 0.0.1
  `-Dpreview_mt -Dexecution_context --release`
 
 * See: `https://github.com/crystal-lang/crystal/blob/a3178c32b/src/fiber/execution_context/parallel.cr`
+
+UGH! Where is `Fiber::ExecutionContext::Parallel`????
+
+  `In src/simple_example.cr:2:17
+  
+   2 | consumers = Fiber::ExecutionContext::Parallel.new("consumers", 8)
+                 ^--------------------------------
+   Error: undefined constant Fiber::ExecutionContext::Parallel`
