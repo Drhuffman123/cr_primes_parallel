@@ -17,7 +17,7 @@ result = Atomic.new(0)
 end
 
 # 10240000.times
-1024000.times { |i| channel.send(i) }
+1024.times { |i| channel.send(i) }
 channel.close
 
 # wait for all workers to be done
