@@ -13,8 +13,10 @@ VERSION: 0.0.1
 
 UGH! Where is `Fiber::ExecutionContext::Parallel`????
 
-  `In src/simple_example.cr:2:17
+  `
+   In src/simple_example.cr:2:17
   
    2 | consumers = Fiber::ExecutionContext::Parallel.new("consumers", 8)
                  ^--------------------------------
-   Error: undefined constant Fiber::ExecutionContext::Parallel`
+   Error: undefined constant Fiber::ExecutionContext::Parallel
+  `
