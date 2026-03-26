@@ -7,6 +7,10 @@ authors:
 description: |
   Exploration in multithreaded coding with Crystal-lang
 
+targets:
+  eg_ex_context2:
+    main: src/eg_ex_context2.cr
+
 # dependencies:
 #   pg:
 #     github: will/crystal-pg

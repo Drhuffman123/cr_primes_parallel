@@ -1,7 +1,4 @@
-require "wait_group"
 
-class EgExContext
-  def initialize
     consumers = Fiber::ExecutionContext::Parallel.new("consumers", 8)
     channel = Channel(Int32).new(64)
     wg = WaitGroup.new(32)
@@ -26,7 +23,3 @@ class EgExContext
     wg.wait
 
     p result.get # => 523776
-  end
-end
-
-eg = EgExContext.new
